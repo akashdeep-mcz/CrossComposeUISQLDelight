@@ -1,14 +1,25 @@
-This is a Kotlin Multiplatform project targeting Android, iOS, Desktop.
+Kotlin Multiplatform Compose and SQLDelight Project
+A Kotlin Multiplatform project using Jetpack Compose for UI and SQLDelight for databases. It supports Android, iOS, and desktop platforms.
 
-* `/composeApp` is for code that will be shared across your Compose Multiplatform applications.
-  It contains several subfolders:
-  - `commonMain` is for code that’s common for all targets.
-  - Other folders are for Kotlin code that will be compiled for only the platform indicated in the folder name.
-    For example, if you want to use Apple’s CryptoKit for the iOS part of your Kotlin app,
-    `iosMain` would be the right folder for such calls.
+Structure
+Common Module: Platform-agnostic code.
+Android Module: Android-specific code.
+iOS Modules: iOS-specific code.
+Desktop Module: Desktop-specific code.
+Dependencies
+Jetpack Compose
+SQLDelight
+SQLDelight Database
+Uses "NoteDatabase" with package "org.example.project.database."
+Models generated from SQLDelight source files in "sqldelight" folder.
+Building and Running
+Android: Use Android Studio or command line.
+iOS: Use Xcode on macOS.
+Desktop: Use native distributions or java -jar.
+Compose Desktop Configuration
+Configure in compose.desktop block in build.gradle.kts.
+More Details
+For specific platform setup and troubleshooting, refer to platform-specific documentation.
 
-* `/iosApp` contains iOS applications. Even if you’re sharing your UI with Compose Multiplatform, 
-  you need this entry point for your iOS app. This is also where you should add SwiftUI code for your project.
-
-
-Learn more about [Kotlin Multiplatform](https://www.jetbrains.com/help/kotlin-multiplatform-dev/get-started.html)…
+License
+Open-source with specific license details.
